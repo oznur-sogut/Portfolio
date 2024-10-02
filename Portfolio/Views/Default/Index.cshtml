@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<!--_HeadComponentPartial Defaultunun burda olduğunu tanımlayan method-->
+@await Component.InvokeAsync("_HeadComponentPartial")
+<body id="top">
+
+    <!--_header -- NavbarComponentPartial Defaultunun burda olduğunu tanımlayan method -- end header-->
+    @await Component.InvokeAsync("_NavbarComponentPartial")
+    <!-- home
+    <!--_FeatureComponentPartial Defaultunun burda olduğunu tanımlayan method -->
+    @await Component.InvokeAsync("_FeatureComponentPartial")
+    <!-- _AboutComponentPartial Defaultunun burda olduğunu tanımlayan method -->
+    @await Component.InvokeAsync("_AboutComponentPartial")
+    <!-- _MyPortfolioComponentPartial Defaultunun burda olduğunu tanımlayan method -->
+    @await Component.InvokeAsync("_MyPortfolioComponentPartial")
+    <!-- _TestimonialComponentPartial Defaultunun burda olduğunu tanımlayan method -->
+    @await Component.InvokeAsync("_TestimonialComponentPartial")
+    <!-- _StatisticComponentPartial Defaultunun burda olduğunu tanımlayan method -->
+    @await Component.InvokeAsync("_StatisticComponentPartial")
+    <!--contact -->
+    @await Component.InvokeAsync("_ContactComponentPartial")
+    <!-- footer-->
+    @await Component.InvokeAsync("_FooterComponentPartial")
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+﻿@model List<Portfolio.DataAccessLayer.Entities.Experience>
+<div class="row about-content about-content--timeline">
+
+    <div class="col-full text-center">
+        <h3>İş ve Proje Deneyimlerim</h3>
+    </div>
+    @foreach (var item in Model)
+    {
+
+        <div class="col-six tab-full left">
+            <div class="timeline">
+
+                <div class="timeline__block">
+                    <div class="timeline__bullet"></div>
+                    <div class="timeline__header">
+                        <p class="timeline__timeframe">@item.ExperienceDate</p>
+                        <h3>@item.ExperienceHead </h3>
+                        <h5>@item.ExperienceTitle</h5>
+                    </div>
+                    <div class="timeline__desc">
+                  <p>@item.ExperienceDescription</p>
+                    </div>
+                </div>
+        </div> <!-- end left -->
+        </div>
+    }
+
+</div>
