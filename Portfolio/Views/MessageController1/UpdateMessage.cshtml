@@ -1,0 +1,39 @@
+﻿@model Message
+@{
+    ViewData["Title"] = "UpdateMessage";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+}
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Gelen Mesajlar</h4>
+		<div class="row">
+			<div class="col-md-12">
+
+
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Deneyim Ekleme Sayfası</div>
+					</div>
+					<div class="card-body">
+						<form method="post">
+							<input type="hidden" asp-for="MessageID" />
+							<label>Mesaj Gönderen Ad Soyadı</label>
+							<input type="text" asp-for="MessageNameSurname" class="form-control" />
+							<br />
+							<label>Konu</label>
+							<input type="text" asp-for="MessageSubject" class="form-control" />
+							<br />
+							<label>Tarih</label>
+							<input type="text" asp-for="MessageSendDate.ToShortTimeString()" class="form-control" />
+							<br />
+							<label>Açıklama</label>
+							<textarea rows="5" class="form-control" asp-for="MessageDetails"></textarea>
+							<br />
+							<button class="btn btn-primary">Mesajı Güncelle</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
