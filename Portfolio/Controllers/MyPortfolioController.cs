@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portfolio.DataAccessLayer.Context;
 
-namespace Portfolio.ViewComponents
+namespace Portfolio.Controllers
 {
-    public class _MyPortfolioComponentPartial: ViewComponent
+    public class MyPortfolioController : Controller
     {
         PortfolioContext context= new PortfolioContext();
-        public IViewComponentResult Invoke()
+        public IActionResult MyPortfolioList()
         {
-            var value = context.MyPortfolios.ToList();
+           var value= context.MyPortfolios.ToList();
             return View(value);
         }
     }

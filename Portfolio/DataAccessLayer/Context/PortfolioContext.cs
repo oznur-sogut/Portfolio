@@ -20,8 +20,9 @@ namespace Portfolio.DataAccessLayer.Context
         public DbSet<Message> Messages { get; set; }
         public DbSet<MyPortfolio> MyPortfolios { get; set; }
         public DbSet<Skills> Skillss { get; set; }
-        public DbSet<SocialMedia> SocialMedia { get; set; }
+        public DbSet<SocialMedia> SocialMedias { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<ToDoList> ToDoLists { get; set; }
         
     }
 }
