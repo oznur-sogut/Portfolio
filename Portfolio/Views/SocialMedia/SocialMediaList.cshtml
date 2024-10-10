@@ -1,0 +1,42 @@
+﻿@model List<SocialMedia>
+@{
+    ViewData["Title"] = "SocialMediaList";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Sosyal Medya</h4>
+		<div class="row">
+							@foreach (var item in Model)
+							{
+			<div class="col-md-3">
+				<div class="card card-stats">
+					<div class="card-body ">
+						<div class="row">
+								<div class="col-5">
+									<div class="icon-big text-center ">
+										<a href="@item.SocialMediaUrl" class="@item.SocialMediaIcon  nav-link"></a>
+									</div>
+								</div>
+								<div class="col-7 d-flex align-items-center">
+									<div class="numbers">
+										<h4 href="@item.SocialMediaUrl" class="card-title">@item.SocialMediaTitle</h4>
+									</div>
+								</div>
+							</div>
+							<div class="card-columns d-flex justify-content-center ">
+
+							<a href="/SocialMedia/UpdateSocialMedia/@item.SocialMediaID" class="btn btn-outline-success">Güncelle</a>
+							<a href="/SocialMedia/DeleteSocialMedia/@item.SocialMediaID" class="btn btn-outline-danger">Sil</a>
+							</div>
+						</div>
+					</div>
+				</div>
+							}
+						
+		</div>
+		<a href="/SocialMedia/CreateSocialMedia/" class="btn btn-primary">Hesap Ekle</a>
+
+	</div>
+</div>
+		

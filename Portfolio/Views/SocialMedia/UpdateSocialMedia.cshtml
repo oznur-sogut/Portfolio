@@ -1,0 +1,37 @@
+﻿@model SocialMedia
+@{
+    ViewData["Title"] = "UpdateSocialMedia";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Sosyal Medya</h4>
+		<div class="row">
+			<div class="col-md-12">
+
+
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Sosyal Medya Hesabı Ekleme Sayfası</div>
+					</div>
+					<div class="card-body">
+						<form method="post">
+							<input type="hidden" asp-for="SocialMediaID" />
+							<label>Uygulama Adı</label>
+							<input type="text" asp-for="SocialMediaTitle" class="form-control" />
+							<br />
+							<label>Hesap Bağlantısı</label>
+							<input type="text" asp-for="SocialMediaUrl" class="form-control" />
+							<br />
+							<label>Icon</label>
+							<input type="text" asp-for="SocialMediaIcon" class="form-control" />
+							<br />
+							<button class="btn btn-primary">Hesabı  Güncelle</button>
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
