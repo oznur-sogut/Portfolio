@@ -16,6 +16,8 @@
 
     <div class="row contact__main">
         <div class="col-eight tab-full contact__form">
+            @foreach (var item in Model)
+                {
             <form name="contactForm" id="contactForm" method="post" action="">
                 <fieldset>
 
@@ -45,6 +47,7 @@
 
                 </fieldset>
             </form>
+                }
 
             <!-- contact-warning -->
             <div class="message-warning">

@@ -15,7 +15,7 @@ namespace Portfolio.Controllers
 		[HttpGet]
 		public IActionResult CreateSocialMedia()
 		{
-			return RedirectToAction("SocialMediaList");
+			return View();
 		}
 		[HttpPost]
 		public IActionResult CreateSocialMedia(SocialMedia socialMedia)

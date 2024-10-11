@@ -1,0 +1,57 @@
+﻿@model List<Testimonial>
+@{
+	ViewData["Title"] = "TestimonialList";
+	Layout = "~/Views/Layout/Index.cshtml";
+	int count = 0;
+
+}
+<link rel="stylesheet" href="~/Ready-Bootstrap-Dashboard-master/assets/css/demo.css">
+
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Referanslarım</h4>
+		<div class="row" style="font-family: Baloo 2, cursive;
+			 font-size: 16px;
+			 color: #ffffff;
+			 text-rendering: optimizeLegibility;
+			 font-weight: initial;">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Referanslar Listesi</div>
+						<a class="tag__item btn btn-default" style="float:right;" href="/Testimonial/CreateTestimonial/">+ Ekle</a>
+
+					</div>
+					@foreach (var item in Model)
+					{
+						<section class="light" style="background: #f3f5f7">
+							<div class="container py-2">
+
+								<article class="postcard light red">
+									
+										<img class="postcard__img" src="@item.TestimonialImageUrl" alt="Image Title" />
+									
+									<div class="postcard__text t-dark">
+										<h1 class="postcard__title red">@item.TestimonialNameSurname</h1>
+										<div class="postcard__subtitle small">
+											<span>@item.TestimonialTitle</span>
+										</div>
+										<div class="postcard__preview-txt">@item.TestimonialDescription</div>
+										<ul class="postcard__tagbox">
+											<li class="tag__item"><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID">Güncelle</a>
+											<li class="tag__item play red">
+												<a href="/Testimonial/DeleteTestimonial/@item.TestimonialID">Sil</a>
+											</li>
+										</ul>
+									</div>
+								</article>
+							</div>
+						</section>
+					}
+                </div>
+
+			</div>
+		</div>
+	</div>
+</div>
