@@ -1,0 +1,37 @@
+﻿@model MyPortfolio
+@{
+    ViewData["Title"] = "OpenPortfolio";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+<input type="hidden" asp-for="MyPortfolioID" />
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Portfoyo</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Portfolyo Ayrıntılı Bilgi</div>
+					</div>
+					<div class="card-body">
+						<div class="card-sub">
+							<img src="@Model.MyPortfolioImageUrl" alt="@Model.MyPortfolioTitle" width="200" height="200" class="rounded-1" />
+							<br/>
+							<br/>
+							<b>Proje Başlığı</b> @Model.MyPortfolioTitle <br />
+							<b>Proje Alt Başlığı</b> @Model.MyPortfolioSubTitle <br />
+							<a href= "@Model.MyPortfolioUrl" > Proje Bağlantısı</a>
+							<br/>
+							<br/>
+							@Model.MyPortfolioDescription
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+		<a class="btn btn-info" href="/MyPortfolio/MyPortfolioList">Geri Dön</a>
+	</div>
+</div>
+

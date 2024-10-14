@@ -1,8 +1,58 @@
-﻿
+﻿@model List<MyPortfolio>
 @{
-    ViewData["Title"] = "MyPortfolioList";
-    Layout = "~/Views/Layout/Index.cshtml";
+	ViewData["Title"] = "MyPortfolioList";
+	Layout = "~/Views/Layout/Index.cshtml";
+	int count = 0;
 }
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Portfolyo</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Portfolyo Listesi</div>
+					</div>
+					<div class="card-body">
+						<div class="card-sub">
+						</div>
+						<table class="table table-striped mt-3">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Proje Resmi</th>
+									<th scope="col">Proje Başlığı</th>
+									<th scope="col">Alt Başlık</th>
+									<th scope="col">Ayrıntılı Bilgi</th>
+									<th scope="col">Sil</th>
+									<th scope="col">Güncelle</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var item in Model)
+								{
+									count++;
+									<tr>
+										<td>@count</td>
+										<td><img src="@item.MyPortfolioImageUrl" alt="Image" width="50" height="50" /></td>
+										<td>@item.MyPortfolioTitle</td>
+										<td>@item.MyPortfolioSubTitle</td>
+										<td><a href="/MyPortfolio/OpenPortfolio/@item.MyPortfolioID" class="btn btn-primary">Aç</a></td>
+										<td><a href="/MyPortfolio/DeletePortfolio/@item.MyPortfolioID" class="btn btn-danger">Sil</a></td>
+										<td><a href="/MyPortfolio/UpdatePortfolio/@item.MyPortfolioID" class="btn btn-success">Güncelle</a></td>
+									</tr>
+								}
+							</tbody>
+						</table>
 
-<h1>MyPortfolioList</h1>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<a href="/MyPortfolio/CreatePortfolio" class="btn btn-info">Yeni Proje Ekle</a>
+	</div>
+</div>
+
 
