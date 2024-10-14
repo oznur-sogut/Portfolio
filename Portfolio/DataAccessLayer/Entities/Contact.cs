@@ -10,5 +10,6 @@
         public string ContactEmail1 { get; set; }
         public string ContactPhone1 { get; set; }
         public string Address { get; set; }
+        public string ContactNameSurname { get; set; }
     }
 }

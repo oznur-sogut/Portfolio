@@ -1,0 +1,59 @@
+﻿@model List<Contact>
+@{
+    ViewData["Title"] = "MyProfileList";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Profilim</h4>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<div class="card-title">Profil Listesi</div>
+					</div>
+					<div class="card-body">
+						<div class="card-sub">
+							Kişisel bilgiler ile ilgili işlemleri aşağıdaki panelden yapablirsiniz.
+						</div>
+						<table class="table table-striped mt-3">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">Ad Soyad</th>
+									<th scope="col">Telefon</th>
+									<th scope="col">Telefon 2</th>
+									<th scope="col">Email</th>
+									<th scope="col">Email2</th>
+									<th scope="col">Adres</th>
+									<th scope="col">Sil</th>
+
+									<th scope="col">Güncelle</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var item in Model)
+								{
+
+									<tr>
+										<td>@item.ContactID</td>
+										<td>@item.ContactNameSurname</td>
+										<td>@item.ContactPhone</td>
+										<td>@item.ContactPhone1</td>
+										<td>@item.ContactEmail</td>
+										<td>@item.ContactEmail1</td>
+										<td>@item.Address</td>
+										<td><a href="/MyProfile/UpdateProfile/@item.ContactID" class="btn btn-success">Güncelle</a></td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
