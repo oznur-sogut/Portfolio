@@ -12,11 +12,6 @@ namespace Portfolio.Controllers
             var value=context.Testimonials.ToList();
             return View(value);
         }
-        public IActionResult TestimonialDetail(int id)
-        {
-            var value = context.Testimonials.Find(id);
-            return View(value);
-        }
         public IActionResult DeleteTestimonial(int id)
         {
             var value = context.Testimonials.Find(id);
